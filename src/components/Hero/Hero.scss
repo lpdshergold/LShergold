@@ -1,7 +1,7 @@
 @use '../../styles/mixins' as *;
 @use '../../index.scss';
 
-.wrapper {
+.hero-wrapper {
   height: 100vh;
   background: var(--bg);
   display: grid;
@@ -15,23 +15,25 @@
   }
 }
 
-.wrapper div {
+.hero-wrapper div {
   display: flex;
   justify-content: center;
   text-align: left;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 0 auto 0 2rem;
+  @include media-md {
+    margin: 0 auto;
+  }
 }
 
-.wrapper div h1,
+.hero-wrapper div h1,
 h2 {
   animation-name: animateHeaders;
-  animation-timing-function: ease;
   margin: 0;
 }
 
-.wrapper div h1 {
-  animation-duration: 1.5s;
+.hero-wrapper div h1 {
+  animation-duration: 1s;
   font-family: var(--font-flair);
   font-size: 3rem;
   @include media-md {
@@ -40,14 +42,27 @@ h2 {
   }
 }
 
-.wrapper div h2 {
-  animation-duration: 3s;
+.hero-wrapper div h2 {
+  animation-duration: 2s;
   font-size: 1.5rem;
   @include media-md {
     font-size: 3rem;
     line-height: 3.5rem;
     margin-top: 1rem;
     margin-bottom: 0;
+  }
+}
+
+.hero-wrapper div h3 {
+  animation-name: animateHeaders;
+  animation-duration: 3s;
+  font-size: 1rem;
+  span {
+    font-family: var(--font-flair);
+    font-weight: 500;
+  }
+  @include media-md {
+    font-size: 2rem;
   }
 }
 
@@ -62,11 +77,11 @@ h2 {
 
 .hero-img {
   animation-name: animateImageBottom;
-  animation-timing-function: ease;
-  animation-duration: 4s;
+  animation-duration: 3s;
   width: 100vw;
   max-width: 390px;
   margin: auto auto;
+  border: 10px solid var(--border);
   @include media-md {
     border-radius: 10%;
     animation-name: animateImageLeft;

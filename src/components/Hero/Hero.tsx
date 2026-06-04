@@ -1,12 +1,16 @@
 import './Hero.scss'
 import heroPic from '../../assets/me_sitting.png'
+import Section from '../Atoms/Section/Section'
 
-export const Hero = () => {
+const Hero = () => {
   return (
-    <section className='wrapper'>
+    <Section className='hero-wrapper'>
       <div>
-        <h1>Hello</h1>
+        <h1>Hello,</h1>
         <h2>My name's Liam...</h2>
+        <h3>
+          A <span>Frontend</span> Engineer
+        </h3>
       </div>
       <div className='line-break' />
       <img
@@ -14,7 +18,7 @@ export const Hero = () => {
         src={heroPic}
         alt='Liam sitting with a furry friend'
       />
-    </section>
+    </Section>
   )
 }
 

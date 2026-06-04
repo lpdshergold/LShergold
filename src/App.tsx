@@ -1,5 +1,6 @@
 import Nav from './components/Nav/Nav'
 import Hero from './components/Hero/Hero'
+import About from './components/About/About'
 import './App.scss'
 
 export const App = () => {
@@ -8,6 +9,7 @@ export const App = () => {
       <Nav />
       <main>
         <Hero />
+        <About />
       </main>
     </>
   )
