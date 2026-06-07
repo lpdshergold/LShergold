@@ -12,7 +12,6 @@ const Nav = () => {
         alt='Liam Shergold logo'
       />
       <div className='nav-buttons'>
-        <button>Home</button>
         <button>About</button>
         <button>Career</button>
         <button>Projects</button>

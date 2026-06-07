@@ -1,18 +1,16 @@
 .nav-wrapper {
-  position: fixed;
   display: grid;
+  height: 5rem;
   grid-template-columns: 1fr auto 1fr;
   background: var(--bg);
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.4);
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
+  overflow: hidden;
 }
 
 .logo {
   // justify-self: start;
-  height: 100px;
-  width: 100px;
+  height: 5rem;
+  width: 5rem;
   fill: var(--text);
 }
 
