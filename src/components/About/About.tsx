@@ -3,12 +3,12 @@ import './About.scss'
 
 const About = () => {
   return (
-    <Section className='about-wrapper'>
-      <div className='about-me'>
-        <div className='about-title'>
+    <Section className='about'>
+      <div className='about__me'>
+        <div className='about__title'>
           <h3>About me</h3>
         </div>
-        <div className='about-copy'>
+        <div className='about__copy'>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
             recusandae ipsum reiciendis iste dolor officia nulla debitis

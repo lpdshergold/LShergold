@@ -1,4 +1,4 @@
-.nav-wrapper {
+.nav {
   display: grid;
   height: 5rem;
   grid-template-columns: 1fr auto 1fr;
@@ -7,20 +7,20 @@
   overflow: hidden;
 }
 
-.logo {
+.nav__logo {
   // justify-self: start;
   height: 5rem;
   width: 5rem;
   fill: var(--text);
 }
 
-.nav-buttons {
+.nav__buttons {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.nav-buttons button {
+.nav__button {
   color: var(--text);
   justify-self: center;
   font-size: 1.5em;

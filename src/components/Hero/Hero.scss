@@ -1,11 +1,11 @@
-@use '../../styles/mixins' as *;
+@use '../../styles/mixins' as mx;
 
-.hero-wrapper {
+.hero {
   height: calc(100vh - 5rem);
   background: var(--bg);
   display: grid;
   grid-template-rows: 1fr auto 1fr;
-  @include media-md {
+  @include mx.media-md {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr auto 1fr;
     justify-content: center;
@@ -14,97 +14,100 @@
   }
 }
 
-.hero-text {
+.hero__text {
   display: flex;
   justify-content: center;
   text-align: left;
   flex-direction: column;
   margin: 0 auto 0 2rem;
-  @include media-md {
+
+  h1,
+  h2 {
+    animation-name: animateHeaders;
+    margin: 0;
+  }
+
+  h1 {
+    animation-duration: 1s;
+    font-family: var(--font-flair);
+    font-size: 3rem;
+    @include mx.media-md {
+      font-size: 6rem;
+      line-height: 5.5rem;
+    }
+  }
+
+  h2 {
+    animation-duration: 2s;
+    font-size: 1.5rem;
+    @include mx.media-md {
+      font-size: 3rem;
+      line-height: 3.5rem;
+      margin-top: 1rem;
+      margin-bottom: 0;
+    }
+  }
+
+  h3 {
+    animation-name: animateHeaders;
+    animation-duration: 3s;
+    font-size: 1rem;
+
+    span {
+      font-family: var(--font-flair);
+      font-weight: 500;
+    }
+
+    @include mx.media-md {
+      font-size: 2rem;
+    }
+  }
+
+  @include mx.media-md {
     margin: 0 auto;
   }
 }
 
-.hero-wrapper div h1,
-h2 {
-  animation-name: animateHeaders;
-  margin: 0;
-}
-
-.hero-wrapper div h1 {
-  animation-duration: 1s;
-  font-family: var(--font-flair);
-  font-size: 3rem;
-  @include media-md {
-    font-size: 6rem;
-    line-height: 5.5rem;
-  }
-}
-
-.hero-wrapper div h2 {
-  animation-duration: 2s;
-  font-size: 1.5rem;
-  @include media-md {
-    font-size: 3rem;
-    line-height: 3.5rem;
-    margin-top: 1rem;
-    margin-bottom: 0;
-  }
-}
-
-.hero-wrapper div h3 {
-  animation-name: animateHeaders;
-  animation-duration: 3s;
-  font-size: 1rem;
-  span {
-    font-family: var(--font-flair);
-    font-weight: 500;
-  }
-  @include media-md {
-    font-size: 2rem;
-  }
-}
-
-.line-break {
+.hero__line-break {
   height: 0;
   background: var(--border);
-  @include media-md {
+  @include mx.media-md {
     height: 75%;
     width: 1px;
   }
 }
 
-.images {
+.hero__images {
   overflow: hidden;
   margin: 0;
   width: 100%;
   position: relative;
 
-  @include media-md {
+  @include mx.media-md {
     overflow: visible;
   }
 
-  .hero-img {
+  .hero__img {
     position: relative;
     width: 100vw;
     max-width: 390px;
     margin: auto auto;
     border: 10px solid var(--border);
-    @include media-md {
+    @include mx.media-md {
       border-radius: 10%;
       animation-name: animateImageLeft;
     }
   }
 
-  .main-img {
+  .hero__img--main {
     z-index: 1;
     animation-duration: 3s;
-    @include media-md {
+    @include mx.media-md {
       margin: 0 0 0 25px;
     }
   }
 
-  .secondary {
+  .hero__img--secondary {
     position: absolute;
     z-index: 0;
     top: 30px;
@@ -112,7 +115,7 @@ h2 {
     animation-duration: 4s;
   }
 
-  .third {
+  .hero__img--third {
     z-index: 0;
     position: absolute;
     top: -150px;

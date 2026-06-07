@@ -1,23 +1,23 @@
-@use '../../styles/mixins' as *;
+@use '../../styles/mixins' as mx;
 
-.about-wrapper {
+.about {
   text-align: left;
   display: grid;
   grid-template-rows: 1fr 1fr;
   align-items: center;
   padding: 0 1rem;
-  @include media-md {
+  @include mx.media-md {
     padding: 0;
   }
 }
 
-.about-me {
-  @include media-md {
+.about__me {
+  @include mx.media-md {
     margin: 0 250px;
   }
 }
 
-.about-title {
+.about__title {
   width: 90px;
   background-color: var(--bg-secondary);
   padding: 1rem;
@@ -28,7 +28,7 @@
   }
 }
 
-.about-copy {
+.about__copy {
   line-height: 22px;
   padding: 2rem;
   border-radius: 0 25px 25px 25px;

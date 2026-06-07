@@ -5,16 +5,16 @@ import './Nav.scss'
 
 const Nav = () => {
   return (
-    <nav className='nav-wrapper'>
+    <nav className='nav'>
       <img
-        className='logo'
+        className='nav__logo'
         src={logo}
         alt='Liam Shergold logo'
       />
-      <div className='nav-buttons'>
-        <button>About</button>
-        <button>Career</button>
-        <button>Projects</button>
+      <div className='nav__buttons'>
+        <button className='nav__button'>About</button>
+        <button className='nav__button'>Career</button>
+        <button className='nav__button'>Projects</button>
       </div>
     </nav>
   )

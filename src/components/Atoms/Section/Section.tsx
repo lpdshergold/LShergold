@@ -4,7 +4,7 @@ type SectionProps = React.HTMLAttributes<'section'>
 
 const Section = ({ children, className }: SectionProps) => {
   return (
-    <section className={`wrapper-section ${className ?? ''}`}>
+    <section className={['section', className].filter(Boolean).join(' ')}>
       {children}
     </section>
   )
