@@ -2,9 +2,12 @@ import './Section.scss'
 
 type SectionProps = React.HTMLAttributes<'section'>
 
-const Section = ({ children, className }: SectionProps) => {
+const Section = ({ children, className, id }: SectionProps) => {
   return (
-    <section className={['section', className].filter(Boolean).join(' ')}>
+    <section
+      id={id}
+      className={['section', className].filter(Boolean).join(' ')}
+    >
       {children}
     </section>
   )

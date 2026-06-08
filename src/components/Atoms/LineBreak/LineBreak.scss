@@ -1,0 +1,21 @@
+@use '../../../styles/mixins' as mx;
+
+.line-break__horizontal {
+  height: 0;
+  border: none;
+  background: var(--border);
+  @include mx.media-md {
+    height: 75%;
+    width: 1px;
+  }
+}
+
+.line-break__vertical {
+  width: 0;
+  border: none;
+  background: var(--border);
+  @include mx.media-md {
+    width: 75%;
+    height: 1px;
+  }
+}

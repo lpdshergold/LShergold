@@ -3,6 +3,7 @@ import heroPic from '../../assets/me/me_sitting.png'
 import secondary_hero_pic from '../../assets/me/me_church.png'
 import third_hero_pic from '../../assets/me/me_standing.png'
 import Section from '../Atoms/Section/Section'
+import LineBreak from '../Atoms/LineBreak/LineBreak'
 
 const Hero = () => {
   return (
@@ -14,7 +15,7 @@ const Hero = () => {
           A <span>Frontend</span> Engineer
         </h3>
       </div>
-      <div className='hero__line-break' />
+      <LineBreak direction='horizontal' />
       <div className='hero__images'>
         <img
           className='hero__img hero__img--main'
