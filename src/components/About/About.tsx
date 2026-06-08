@@ -1,12 +1,7 @@
 import Section from '../Atoms/Section/Section'
 import LineBreak from '../Atoms/LineBreak/LineBreak'
+import { copy, skills } from '../../config/config'
 import './About.scss'
-
-// const skils = [
-//   {
-//     name: 'React',
-//   },
-// ]
 
 const About = () => {
   return (
@@ -16,30 +11,40 @@ const About = () => {
     >
       <div className='about__me'>
         <div className='about__title'>
-          <h3>About me</h3>
+          <h3>{copy.about.title}</h3>
         </div>
         <div className='about__copy'>
-          <p>
-            Frontend Developer with 7 years of professional experience
-            specializing in React, TypeScript, and JavaScript and skilled in
-            building scalable user interfaces using Redux, HTML, and CSS. A
-            Proven track record of delivering new features, maintaining and
-            improving legacy codebases, and implementing efficient development
-            processes. Currently contributing to a Guided Selling Engine and AI
-            sales agent at 15gifts/Humara, supporting high-profile clients
-            across Europe and the US. <br />
-            <br />A first class honours graduate of the University of Brighton,
-            studying BSc (Hons) Digital Games Development.
-            <br />
-            <br />
-            Prior to taking up further studies, I worked within the Salisbury
-            NHS, as an outsourced payroll officer for the Royal Bournemouth and
-            Christchurch Hospital.
-          </p>
+          <p>{copy.about.copy}</p>
         </div>
       </div>
       <LineBreak direction='vertical' />
-      <i className='fa-brands fa-react'></i>
+      <div className='about__skills'>
+        <div className='about__skills-group'>
+          {skills.map((skill) => {
+            return (
+              <div
+                key={skill.name}
+                className='about__skill'
+              >
+                <i className={skill.icon}></i>
+                <span>{skill.name}</span>
+              </div>
+            )
+          })}
+          {skills.map((skill) => {
+            return (
+              <div
+                aria-hidden
+                key={skill.name}
+                className='about__skill'
+              >
+                <i className={skill.icon}></i>
+                <span>{skill.name}</span>
+              </div>
+            )
+          })}
+        </div>
+      </div>
     </Section>
   )
 }
