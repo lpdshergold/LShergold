@@ -5,7 +5,10 @@ import './Nav.scss'
 
 const Nav = () => {
   return (
-    <nav className='nav'>
+    <nav
+      className='nav'
+      id='nav'
+    >
       <img
         className='nav__logo'
         src={logo}
@@ -18,7 +21,12 @@ const Nav = () => {
         >
           About
         </button>
-        <button className='nav__button'>Career</button>
+        <button
+          onClick={() => scrollIntoView('career')}
+          className='nav__button'
+        >
+          Career
+        </button>
         <button className='nav__button'>Projects</button>
       </div>
     </nav>

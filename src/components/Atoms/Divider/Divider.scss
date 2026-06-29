@@ -1,21 +1,19 @@
 @use '../../../styles/mixins' as mx;
 
 .line-break__horizontal {
-  height: 0;
   border: none;
   background: var(--border);
-  @include mx.media-md {
-    height: 75%;
-    width: 1px;
-  }
+  height: 2px;
+  width: 75%;
 }
 
 .line-break__vertical {
-  width: 0;
   border: none;
   background: var(--border);
+  height: 2px;
+  width: 75%;
   @include mx.media-md {
-    width: 75%;
-    height: 1px;
+    width: 2px;
+    height: 75%;
   }
 }

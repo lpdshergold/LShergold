@@ -31,8 +31,7 @@ p {
   margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
+img {
+  display: block;
+  max-inline-size: 100%;
 }

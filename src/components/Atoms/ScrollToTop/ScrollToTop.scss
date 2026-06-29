@@ -1,0 +1,68 @@
+.scroll-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  border-radius: 50%;
+  color: var(--text);
+  z-index: 10;
+  background-color: transparent;
+  border: 0px;
+  cursor: pointer;
+
+  &[hidden] {
+    visibility: hidden;
+    .scroll-border,
+    .scroll-copy,
+    svg {
+      opacity: 0;
+      transition: 0.3s;
+    }
+  }
+
+  .scroll-border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid var(--text);
+    border-radius: 50%;
+    opacity: 0.6;
+    transition: 0.5s;
+
+    svg {
+      scale: 1;
+      transition: 0.5s;
+    }
+  }
+
+  .scroll-copy {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    transition: 0.5s;
+  }
+
+  &:hover {
+    .scroll-border {
+      opacity: 1;
+      scale: 1.2;
+      svg {
+        transform: translateY(-12px);
+        scale: 1.5;
+      }
+    }
+
+    .scroll-copy {
+      font-size: 0.8rem;
+      scale: 1.1;
+      opacity: 1;
+    }
+  }
+}

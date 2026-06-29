@@ -1,4 +1,4 @@
-import './LineBreak.scss'
+import './Divider.scss'
 
 interface LineBreakProps {
   direction: 'horizontal' | 'vertical'
