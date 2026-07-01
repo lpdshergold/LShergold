@@ -27,7 +27,12 @@ const Nav = () => {
         >
           Career
         </button>
-        <button className='nav__button'>Projects</button>
+        <button
+          onClick={() => scrollIntoView('project')}
+          className='nav__button'
+        >
+          Projects
+        </button>
       </div>
     </nav>
   )

@@ -1,0 +1,55 @@
+.contact {
+  margin: 4rem;
+
+  &__title {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  &__subtitle {
+    display: block;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  &__email {
+    font-size: 1.5rem;
+    a {
+      text-decoration: none;
+      color: var(--text);
+      border-bottom: 1px solid transparent;
+      transition: 0.3s;
+
+      &:hover {
+        color: var(--accent);
+        border-bottom: 1px solid;
+      }
+    }
+  }
+}
+
+// .contact__title {
+//   font-size: 3rem;
+//   margin-bottom: 4rem;
+// }
+
+// .contact__subtitle {
+//   display: block;
+//   font-size: 1.25rem;
+//   margin-bottom: 1rem;
+// }
+
+// .contact__email {
+//   font-size: 1.5rem;
+//   a {
+//     text-decoration: none;
+//     color: var(--text);
+//     border-bottom: 1px solid transparent;
+//     transition: 0.3s;
+
+//     &:hover {
+//       color: var(--accent);
+//       border-bottom: 1px solid;
+//     }
+//   }
+// }

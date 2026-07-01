@@ -83,13 +83,13 @@ const Career = () => {
                       id={`career__accordion-${job.company.toLowerCase()}`}
                       key={position.role}
                     >
-                      <h3 className='career__accordion-panel--title'>
+                      <h3 className='career__accordion-panel-title'>
                         {position.role}
                       </h3>
-                      <span className='career__accordion-panel--date'>
+                      <span className='career__accordion-panel-date'>
                         {position.date}
                       </span>
-                      <p className='career__accordion-panel--description'>
+                      <p className='career__accordion-panel-description'>
                         {position.description}
                       </p>
                     </div>
