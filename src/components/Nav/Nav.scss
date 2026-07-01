@@ -10,42 +10,42 @@
   @include mx.media-md {
     grid-template-columns: 1fr auto 1fr;
   }
-}
 
-.nav__logo {
-  height: 5rem;
-  width: 5rem;
-  fill: var(--text);
-}
-
-.nav__buttons {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  margin-right: 1rem;
-  gap: 1rem;
-  @include mx.media-md {
-    justify-content: center;
-    margin: 0;
-  }
-}
-
-.nav__button {
-  color: var(--text);
-  justify-self: center;
-  font-size: 1em;
-  height: auto;
-  padding: 0;
-  background: transparent;
-  transition: 0.5s;
-  border: none;
-  border-bottom: 2px solid transparent;
-  cursor: pointer;
-  @include mx.media-sm {
-    font-size: 1.5em;
+  &__logo {
+    height: 5rem;
+    width: 5rem;
+    fill: var(--text);
   }
 
-  &:hover {
-    border-bottom: 2px solid var(--accent);
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 1rem;
+    gap: 1rem;
+    @include mx.media-md {
+      justify-content: center;
+      margin: 0;
+    }
+  }
+
+  &__button {
+    color: var(--text);
+    justify-self: center;
+    font-size: 1em;
+    height: auto;
+    padding: 0;
+    background: transparent;
+    transition: 0.5s;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    @include mx.media-sm {
+      font-size: 1.5em;
+    }
+
+    &:hover {
+      border-bottom: 2px solid var(--accent);
+    }
   }
 }

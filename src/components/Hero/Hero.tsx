@@ -45,7 +45,7 @@ const Hero = () => {
   const getImageClassName = (modifier: string, index: number) =>
     [
       'hero__img',
-      `hero__img--${modifier}`,
+      `hero__img-${modifier}`,
       index === activeIndex && animationComplete ? 'hero__img--active' : '',
     ]
       .filter(Boolean)
