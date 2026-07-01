@@ -19,7 +19,10 @@
   justify-content: center;
   text-align: left;
   flex-direction: column;
-  margin: 0 auto 0 2rem;
+  margin: 0 auto;
+  @include mx.media-md {
+    margin: 0 auto 0 2rem;
+  }
 
   h1,
   h2 {
@@ -105,18 +108,17 @@
   .hero__img--main,
   .hero__img--secondary,
   .hero__img--third {
-    animation: heroAnimateImageLeft 3s ease;
+    --image-rotate: 0deg;
+    animation: heroAnimateImageScale 3s ease;
     opacity: 0.8;
     z-index: 0;
     transition: 0.3s;
   }
 
-  .hero__img--main {
-  }
-
   .hero__img--secondary {
     position: absolute;
-    transform: rotate(3deg);
+    --image-rotate: 3deg;
+    transform: rotate(var(--image-rotate));
     @include mx.media-md {
       top: calc(0px - 10%);
       left: 45px;
@@ -127,7 +129,8 @@
 
   .hero__img--third {
     position: absolute;
-    transform: rotate(-3deg);
+    --image-rotate: -3deg;
+    transform: rotate(var(--image-rotate));
     @include mx.media-md {
       top: 0;
       left: -45px;
@@ -138,7 +141,7 @@
 
   .hero__img--active {
     opacity: 1;
-    transform: scale(1.1);
+    transform: scale(1.2);
     z-index: 10;
     transition: 1s;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
@@ -167,23 +170,13 @@
   }
 }
 
-@keyframes heroAnimateImageLeft {
+@keyframes heroAnimateImageScale {
   from {
-    transform: scale(0);
+    transform: scale(0) rotate(var(--image-rotate, 0deg));
     opacity: 0;
   }
   to {
-    transform: scale(1);
-  }
-}
-
-@keyframes heroAnimateImageBottom {
-  from {
-    transform: translateY(500px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
+    transform: scale(1) rotate(var(--image-rotate, 0deg));
     opacity: 0.8;
   }
 }

@@ -10,8 +10,10 @@
 }
 
 .about__me {
-  max-width: 1000px;
   padding: 0 2rem;
+  @include mx.media-md {
+    padding: 0 8rem;
+  }
 }
 
 .about__title {
@@ -74,12 +76,15 @@
 
 .about__skills-group {
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   z-index: 1;
   display: flex;
   flex-wrap: nowrap;
+  align-items: center;
+  width: max-content;
   text-align: center;
-  gap: 4rem;
+  gap: 2rem;
+  will-change: transform;
   animation: spin 45s infinite linear;
 }
 
@@ -113,6 +118,6 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(calc(-50% - 2rem / 2));
   }
 }

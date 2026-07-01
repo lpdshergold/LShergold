@@ -1,0 +1,101 @@
+.career {
+  width: 100%;
+  background-color: var(--bg-secondary);
+}
+
+.career__title {
+  font-size: 3rem;
+  margin: 4rem 0 2rem 0;
+}
+
+.career__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+
+.career__container-job {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 80%;
+}
+
+.career__accordion-btn {
+  width: 100%;
+  background-color: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  padding: 18px;
+  text-align: left;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.2s;
+
+  span {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  &[aria-expanded='true'] {
+    border-radius: 10px 10px 0 0;
+
+    div > svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  div > svg {
+    transition: 0.5s;
+  }
+}
+
+.career__accordion-btn:hover {
+  background-color: var(--accent);
+}
+
+.career__accordion-panel {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  background-color: var(--bg);
+  padding: 0 1rem;
+  transition:
+    max-height 0.2s ease-out,
+    opacity 0.2s ease-out,
+    padding 0.3s ease-out;
+}
+
+.career__accordion-panel--active {
+  max-height: 500px;
+  opacity: 1;
+  padding: 1rem;
+  transition:
+    max-height 0.2s ease-out,
+    opacity 0.2s ease-out,
+    padding 0.3s ease-out;
+
+  &:last-child {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.career__accordion-panel--title,
+.career__accordion-panel--date,
+.career__accordion-panel--description {
+  text-align: left;
+}
+.career__accordion-panel--title {
+  margin: 0 0 0.5rem;
+}
+
+.career__accordion-panel--date {
+  display: block;
+  margin-bottom: 1rem;
+}

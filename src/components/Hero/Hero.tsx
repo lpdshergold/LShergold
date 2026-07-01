@@ -38,7 +38,7 @@ const Hero = () => {
     } else {
       setTimeout(() => {
         setAnimationComplete(true)
-      }, 3100)
+      }, 3000)
     }
   }, [animationComplete])
 

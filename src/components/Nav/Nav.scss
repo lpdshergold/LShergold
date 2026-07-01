@@ -36,10 +36,16 @@
   font-size: 1em;
   height: auto;
   padding: 0;
-  border: none;
   background: transparent;
+  transition: 0.5s;
+  border: none;
+  border-bottom: 2px solid transparent;
   cursor: pointer;
-  @include mx.media-md {
+  @include mx.media-sm {
     font-size: 1.5em;
+  }
+
+  &:hover {
+    border-bottom: 2px solid var(--accent);
   }
 }
